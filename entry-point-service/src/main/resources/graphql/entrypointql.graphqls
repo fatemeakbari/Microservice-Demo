@@ -1,0 +1,20 @@
+type User {
+    id: ID!
+    fullName: String!
+    email: String!
+}
+
+type Book {
+    id: ID!
+    creator: User!
+    title: String!
+    isbn10: String
+}
+
+type Query {
+
+    books: [Book]
+    users: [User]
+    userById(id: ID!): User
+
+}
